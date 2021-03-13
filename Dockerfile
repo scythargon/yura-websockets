@@ -8,4 +8,4 @@ COPY requirements.txt ./
 RUN pip install -r requirements.txt
 ADD . /code/
 
-CMD ["./main.py"]`
+CMD ["./main.py"]
