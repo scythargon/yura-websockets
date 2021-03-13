@@ -1,3 +1,5 @@
+#!/usr/bin/env -S python
+
 import asyncio
 import logging
 import websockets

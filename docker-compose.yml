@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+
+  backend:
+    restart: unless-stopped
+      - "8021:4000"  # host:container
+    build:
+        context: .
