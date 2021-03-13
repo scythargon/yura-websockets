@@ -3,6 +3,7 @@ services:
 
   backend:
     restart: unless-stopped
+    ports:
       - "8021:4000"  # host:container
     build:
         context: .
