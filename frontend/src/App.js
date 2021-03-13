@@ -36,7 +36,9 @@ const App = () => {
   useEffect(() => {
     username = prompt("Enter your nickname:", "");
 
-    ws = new ReconnectingWebSocket("ws://localhost:4000");
+    const wsDomain = window.location.href.includes("localWS") ? "localhost:4000" : "yura.scythargon.ru";
+
+    ws = new ReconnectingWebSocket(`ws://${wsDomain}`);
     ws.onopen = onOpen;
     ws.onmessage = onMessage;
     ws.onclose = onClose;
